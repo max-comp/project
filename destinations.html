@@ -11,7 +11,7 @@
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="destinations.html" class="active">Destinations</a></li>
+                <li><a href="destinations.html" id="active">Destinations</a></li>
                 <li><a href="tips.html">Travel Tips</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
@@ -27,18 +27,18 @@
 
         <section class="destination-filters">
             <h2>Filter Destinations</h2>
-            <div class="filter-buttons">
+            <nav class="filter-buttons">
                 <button class="filter-btn active" data-filter="all">All</button>
                 <button class="filter-btn" data-filter="europe">Europe</button>
                 <button class="filter-btn" data-filter="asia">Asia</button>
                 <button class="filter-btn" data-filter="americas">Americas</button>
-            </div>
+            </nav>
         </section>
         
         <section class="destinations-grid">
             <article class="destination-card europe">
                 <img src="images/paris.jpg" alt="Eiffel Tower, Paris">
-                <div class="destination-content">
+                <section class="destination-content">
                     <h2>Paris, France</h2>
                     <p class="destination-description">Experience the city of love and its timeless charm.</p>
                     <ul class="highlights">
@@ -46,17 +46,17 @@
                         <li>Explore the Louvre Museum</li>
                         <li>Stroll through Montmartre</li>
                     </ul>
-                    <div class="destination-meta">
+                    <section class="destination-meta">
                         <span class="best-time">Best Time: Apr-Oct</span>
                         <span class="duration">Ideal Duration: 5-7 days</span>
-                    </div>
+                    </section>
                     <a href="#" class="cta-button">Plan Your Trip</a>
-                </div>
+                </section>
             </article>
 
             <article class="destination-card asia">
                 <img src="images/tokyo.jpg" alt="Tokyo Skyline">
-                <div class="destination-content">
+                <section class="destination-content">
                     <h2>Tokyo, Japan</h2>
                     <p class="destination-description">Immerse yourself in the perfect blend of tradition and innovation.</p>
                     <ul class="highlights">
@@ -64,17 +64,17 @@
                         <li>Visit ancient temples</li>
                         <li>Try authentic Japanese cuisine</li>
                     </ul>
-                    <div class="destination-meta">
+                    <section class="destination-meta">
                         <span class="best-time">Best Time: Mar-May</span>
                         <span class="duration">Ideal Duration: 7-10 days</span>
-                    </div>
+                    </section>
                     <a href="#" class="cta-button">Plan Your Trip</a>
-                </div>
+                </section>
             </article>
 
             <article class="destination-card americas">
                 <img src="images/machu-picchu.jpg" alt="Machu Picchu">
-                <div class="destination-content">
+                <section class="destination-content">
                     <h2>Machu Picchu, Peru</h2>
                     <p class="destination-description">Discover the ancient Incan citadel in the Andes Mountains.</p>
                     <ul class="highlights">
@@ -82,17 +82,17 @@
                         <li>Explore ancient ruins</li>
                         <li>Experience Andean culture</li>
                     </ul>
-                    <div class="destination-meta">
+                    <section class="destination-meta">
                         <span class="best-time">Best Time: May-Oct</span>
                         <span class="duration">Ideal Duration: 4-5 days</span>
-                    </div>
+                    </section>
                     <a href="#" class="cta-button">Plan Your Trip</a>
-                </div>
+                </section>
             </article>
 
             <article class="destination-card europe">
                 <img src="images/santorini.jpg" alt="Santorini Sunset">
-                <div class="destination-content">
+                <section class="destination-content">
                     <h2>Santorini, Greece</h2>
                     <p class="destination-description">Experience the magic of white-washed buildings and stunning sunsets.</p>
                     <ul class="highlights">
@@ -100,18 +100,18 @@
                         <li>Visit black sand beaches</li>
                         <li>Explore ancient Akrotiri</li>
                     </ul>
-                    <div class="destination-meta">
+                    <section class="destination-meta">
                         <span class="best-time">Best Time: Jun-Sep</span>
                         <span class="duration">Ideal Duration: 4-6 days</span>
-                    </div>
+                    </section>
                     <a href="#" class="cta-button">Plan Your Trip</a>
-                </div>
+                </section>
             </article>
         </section>
 
         <section class="featured-experiences">
             <h2>Featured Experiences</h2>
-            <div class="experience-slider">
+            <section class="experience-slider">
                 <article class="experience-card">
                     <img src="images/cooking-class.jpg" alt="Cooking Class">
                     <h3>Local Cooking Classes</h3>
@@ -127,12 +127,12 @@
                     <h3>Cultural Tours</h3>
                     <p>Immerse yourself in local traditions</p>
                 </article>
-            </div>
+            </section>
         </section>
 
         <section class="travel-tips">
             <h2>Travel Planning Tips</h2>
-            <div class="tips-container">
+            <section class="tips-container">
                 <article class="tip-card">
                     <h3>Best Time to Visit</h3>
                     <p>Research seasonal weather patterns and local events to plan your perfect trip.</p>
@@ -145,25 +145,22 @@
                     <h3>Cultural Etiquette</h3>
                     <p>Understand local customs and traditions for a respectful travel experience.</p>
                 </article>
-            </div>
+            </section>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 Wanderlust Adventures. All rights reserved.</p>
+        <p>&copy; 2025 Wanderlust Adventures. All rights reserved.</p>
     </footer>
 
     <script>
-        // Simple filter functionality
         document.querySelectorAll('.filter-btn').forEach(button => {
             button.addEventListener('click', () => {
                 const filter = button.dataset.filter;
                 
-                // Update active button
                 document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
                 button.classList.add('active');
                 
-                // Filter destinations
                 document.querySelectorAll('.destination-card').forEach(card => {
                     if (filter === 'all' || card.classList.contains(filter)) {
                         card.style.display = 'block';
